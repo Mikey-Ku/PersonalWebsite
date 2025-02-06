@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences</title>
+    <link rel="stylesheet" href="experiances.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <span>Michael Ku Jr</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiences.html"target="_self">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h2>Technical Experience</h2>
+
+        <!-- Olin Baja -->
+        <div class="experience-content">
+            <div class="content-wrapper">
+                <div class="photo-album">
+                    <img id="baja-logoo" src="BajaLogo.jpg" alt="Baja-logo" class="main-photo" onclick="openModal('BajaLogo.jpg')">
+                </div>
+                <div class="text-content">
+                    <h3>Olin Baja</h3>
+                    <p>Olin Baja is a student-led team at Olin College that designs, builds, and races off-road vehicles as part of the SAE Baja competition. As a member of the electrical subteam, I have worked on developing data collection systems using ride height sensors to analyze vehicle performance and dynamics. Additionally, I have contributed to the installation of critical safety features, including brake lights and emergency stop (E-stop) systems, ensuring the vehicle meets competition and safety standards. Through this hands-on experience, I have gained expertise in electrical system design, sensor integration, and vehicle safety, contributing to the team's success in building a high-performance off-road vehicle.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethos Angel Investment -->
+        <div class="experience-content">
+            <div class="content-wrapper">
+                <div class="photo-album">
+                    <img id="Ethos-Logo" src="EthosLogo.png" alt="Ethos Logo" class="main-photo" onclick="openModal('EthosLogo.png')">
+                </div>
+                <div class="text-content">
+                    <h3>Ethos Angel Investment</h3>
+                <p>Ethos Angel Investments is a Canadian-based angel investment firm that has raised $9.3 million CAD from accredited investors across Canada, the U.S., and Spain, focusing on early-stage startups with scalable business models. Since 2018, Ethos has launched two funds, investing in 20 companies across Canada, the U.S., and Europe, with a collective valuation of $2 billion CAD. The firm operates on principles of collaboration and mentorship, leveraging its General Partners' extensive experience to support founders in scaling their businesses. In my role at Ethos, I conducted in-depth research on portfolio companies, tracking their progress and industry trends to compile detailed semi-annual reports that kept investors informed on company performance and market positioning.
+                </p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Non-Technical Experience</h2>
+
+        <!-- Varsity Tutors -->
+        <div class="experience-content">
+            <div class="content-wrapper">
+                <div class="photo-album">
+                    <img id="Varsity" src="VarsityTutor.png" alt="Varsity-Logo" class="main-photo" onclick="openModal('VarsityTutor.png')">
+                </div>
+                <div class="text-content">
+                    <h3>Varsity Tutors</h3>
+                    <p>Varsity Tutors is an online learning platform that connects students with expert educators for personalized tutoring. As a virtual tutor, I teach a range of math subjects, from Algebra to Calculus BC, as well as Statistics and Computer Science. I work with students of varying skill levels, helping them build a strong foundation in mathematical concepts, develop problem-solving skills, and gain confidence in their abilities. Through one-on-one sessions, I tailor my teaching approach to each student’s needs, ensuring they grasp complex topics and achieve their academic goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Wayback Burgers -->
+        <div class="experience-content">
+            <div class="content-wrapper">
+                <div class="photo-album">
+                    <img id="Wayback" src="Wayback.png" alt="Wayback-Logo" class="main-photo" onclick="openModal('Wayback.png')">
+                </div>
+                <div class="text-content">
+                    <h3>Wayback Burgers</h3>
+                    <p>Wayback Burgers is a fast-casual restaurant known for its handcrafted burgers, sandwiches, and milkshakes. As an employee, I gained valuable customer service experience, interacting with guests to ensure a positive dining experience while working in a fast-paced environment. I also developed hands-on skills in food preparation, maintaining quality standards, and efficiently creating menu items. This role strengthened my ability to work as part of a team, manage time effectively, and adapt to a dynamic workplace.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Modal for full photo display -->
+    <div id="photoModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/michael-ku-jr-512b70194/"target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:michael.ku@outlook.com"target="_blank">Email</a></li>
+            <li><a href="https://www.instagram.com/mikey_ku24/"target="_blank">Instagram</a></li>
+            <li><a href="https://github.com/Mikey-Ku"target="_blank">GitHub</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Function to change the main photo when a small photo is clicked
+        function changeMainPhoto(mainPhotoId, smallImg) {
+            var mainPhoto = document.getElementById(mainPhotoId);
+            mainPhoto.src = smallImg.src;
+            mainPhoto.onclick = function() {
+                openModal(smallImg.src);
+            };
+        }
+
+        // Function to open the modal with the full photo
+        function openModal(src) {
+            var modal = document.getElementById('photoModal');
+            var modalImg = document.getElementById('modalImage');
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById('photoModal');
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            var modal = document.getElementById('photoModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        };
+
+        // Close modal when pressing the Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
