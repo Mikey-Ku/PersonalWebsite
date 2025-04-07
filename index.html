@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hi, my name is Michael Ku Jr and I am a currently a student at Olin College of Engineering. Welcome to my personal portfolio!">
-  <title>Home</title>
+  <title>Michael Ku Jr | Portfolio</title>
   <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- Header Section -->
@@ -29,7 +30,7 @@
     <div class="hero-content">
       <h1>Hi, I'm Michael Ku Jr</h1>
       <p>Student at Olin College of Engineering</p>
-      <a href="#about" class="btn">Learn More</a>
+      <a href="#about" class="btn">Learn More <i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
@@ -37,7 +38,7 @@
   <section id="about">
     <h2>About Me</h2>
     <div class="about-content">
-      <img src="Portrait.jpg" alt="Michael Ku Jr">
+      <img src="Images/Portrait.jpg" alt="Michael Ku Jr">
       <p>Hello! My name is Michael Ku Jr and welcome to my personal portfolio! I'm a student at Olin College of Engineering, where I'm pursuing a major in Electrical and Computer Engineering. My passion lies at the intersection of technology and creativity, with a strong focus on generative AI and intelligent agents. I love exploring how AI can enhance problem-solving, automate tasks, and push the boundaries of innovation. Whether it's building new models, experimenting with AI-driven tools, or working on hands-on engineering projects, I'm always eager to learn and create. Feel free to explore my work and reach out—I'm always open to new ideas and collaborations!</p>
     </div>
   </section>
@@ -47,19 +48,19 @@
     <h2>Projects</h2>
     <div class="grid-container">
       <a href="Projects.html#HopperProject" class="grid-item">
-        <img src="Hopper.png" alt="Hopper Project">
+        <img src="Images/Hopper.png" alt="Hopper Project">
         <div class="overlay">
           <div class="text">Hopper Project</div>
         </div>
       </a>
       <a href="Projects.html#PersonalWebsite" class="grid-item">
-        <img src="PersonalWebsite.png" alt="Personal Website">
+        <img src="Images/PersonalWebsite.png" alt="Personal Website">
         <div class="overlay">
           <div class="text">Personal Website</div>
         </div>
       </a>
       <a href="Projects.html#RideHeighSensor" class="grid-item">
-        <img src="PCB4.png" alt="Ride Height Sensor">
+        <img src="Images/PCB4.png" alt="Ride Height Sensor">
         <div class="overlay">
           <div class="text">Ride Height Sensor</div>
         </div>
@@ -72,19 +73,19 @@
     <h2>Experience</h2>
     <div class="grid-container">
       <a href="experiences.html#experience1" class="grid-item">
-        <img src="EthosLogo.png" alt="Ethos Angel Investment">
+        <img src="Images/EthosLogo.png" alt="Ethos Angel Investment">
         <div class="overlay">
           <div class="text">Ethos Angel Investment</div>
         </div>
       </a>
       <a href="experiences.html#experience2" class="grid-item">
-        <img src="BajaLogo.jpg" alt="Olin Baja">
+        <img src="Images/BajaLogo.jpg" alt="Olin Baja">
         <div class="overlay">
           <div class="text">Olin Baja</div>
         </div>
       </a>
       <a href="experiences.html#experience3" class="grid-item">
-        <img src="VarsityTutor.png" alt="Varsity Tutors">
+        <img src="Images/VarsityTutor.png" alt="Varsity Tutors">
         <div class="overlay">
           <div class="text">Varsity Tutors</div>
         </div>
@@ -94,11 +95,51 @@
 
   <footer>
     <ul>
-        <li><a href="https://www.linkedin.com/in/michael-ku-jr-512b70194/"target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:michael.ku@outlook.com"target="_blank">Email</a></li>
-        <li><a href="https://www.instagram.com/mikey_ku24/"target="_blank">Instagram</a></li>
-        <li><a href="https://github.com/Mikey-Ku"target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/michael-ku-jr-512b70194/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:michael.ku@outlook.com" target="_blank"><i class="far fa-envelope"></i> Email</a></li>
+        <li><a href="https://www.instagram.com/mikey_ku24/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://github.com/Mikey-Ku" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
     </ul>
-</footer>
+  </footer>
+
+  <!-- JavaScript for animations and interactions -->
+  <script>
+    // Scroll animation for elements
+    document.addEventListener('DOMContentLoaded', function() {
+      // Function to check if element is in viewport
+      function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.bottom >= 0
+        );
+      }
+      
+      // Function to add 'visible' class to elements when they enter viewport
+      function handleScrollAnimation() {
+        const aboutContent = document.querySelector('.about-content');
+        const gridItems = document.querySelectorAll('.grid-item');
+        
+        if (isInViewport(aboutContent)) {
+          aboutContent.classList.add('visible');
+        }
+        
+        gridItems.forEach((item, index) => {
+          if (isInViewport(item)) {
+            // Add delay based on index for staggered animation
+            setTimeout(() => {
+              item.classList.add('visible');
+            }, 100 * index);
+          }
+        });
+      }
+      
+      // Run once on load
+      handleScrollAnimation();
+      
+      // Add event listener for scroll
+      window.addEventListener('scroll', handleScrollAnimation);
+    });
+  </script>
 </body>
 </html>

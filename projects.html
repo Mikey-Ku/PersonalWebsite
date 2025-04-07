@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiences of Michael Ku Jr</title>
+    <meta name="description" content="Michael Ku Jr's portfolio projects - Olin College of Engineering student showcasing engineering and technical work">
+    <title>Projects | Michael Ku Jr</title>
     <link rel="stylesheet" href="projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -15,122 +18,276 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Projects.html">Projects</a></li>
-                <li><a href="Experiences.html">Experience</a></li>
+                <li><a href="projects.html" target="_self">Projects</a></li>
+                <li><a href="experiences.html">Experience</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="projects">
-        <h2>Projects</h2>
-
-        <!-- Hopper Project -->
-        <div class="experience-content">
-            <div class="content-wrapper">
-                <div class="photo-album">
-                    <img id="hopper-main-photo" src="Hopper.png" alt="Hopper" class="main-photo" onclick="openModal('Hopper.png')" style="position: relative;">
-                    <div id="hopper-album" class="album" style="display: block;">
-                        <img src="Hopper.png" alt="Hopper" onclick="changeMainPhoto('hopper-main-photo', this)">
-                        <img src="Hopper2.png" alt="Hopper" onclick="changeMainPhoto('hopper-main-photo', this)">
-                        <img src="Hopper3.png" alt="Hopper" onclick="changeMainPhoto('hopper-main-photo', this)">
-                        <img src="Hopper4.png" alt="Hopper" onclick="changeMainPhoto('hopper-main-photo', this)">
-                    </div>
+        <h2>Engineering Projects</h2>
+        
+        <!-- Projects Grid Preview -->
+        <div class="projects-grid">
+            <!-- Hopper Project Preview -->
+            <div class="project-preview" data-project="hopper">
+                <div class="preview-image">
+                    <img src="Images/Hopper.png" alt="Hopper Project">
                 </div>
-                <div class="text-content">
+                <div class="preview-content">
                     <h3>Hopper Project</h3>
-                    <p>In our engineering design class, Design Nature, we were tasked with designing a mechanical hopper inspired by a real-life hopping creature. To begin, we observed natural hoppers in the wild, using their movement as inspiration. Applying the engineering design process, we iterated through multiple prototypes before finalizing a design, which we presented on Hopper Day.</p>
-                    <p>In the photo album, you can see various versions of my hopper, including the final iteration presented for Hopper Day. My design was inspired by the click beetle and leveraged principles of center of mass and stored energy. Using rubber tubing, my hopper built up force that was released through a delayed trigger mechanism. This caused two masses to snap together, producing a clap sound while shifting the center of mass upward—ultimately propelling the hopper into the air.</p>
+                    <p>A mechanical design project inspired by the click beetle's hopping mechanism, applying engineering principles to create a unique hopping device.</p>
+                    <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Personal Website -->
-        <div class="experience-content">
-            <div class="content-wrapper">
-                <div class="photo-album">
-                    <img id="website-main-photo" src="IndexCode.png" alt="Personal Website" class="main-photo" onclick="openModal('IndexCode.png')" style="position: relative;">
-                    <div id="website-album" class="album" style="display: block;">
-                        <img src="IndexCode.png" alt="Personal Website" onclick="changeMainPhoto('website-main-photo', this)">
-                        <img src="HiImMichael.png" alt="Personal Website" onclick="changeMainPhoto('website-main-photo', this)">
-                        <img src="WebPlan.png" alt="Personal Website" onclick="changeMainPhoto('website-main-photo', this)">
-                        <img src="JavaScript.png" alt="Personal Website" onclick="changeMainPhoto('website-main-photo', this)">
-                    </div>
+            
+            <!-- Personal Website Preview -->
+            <div class="project-preview" data-project="website">
+                <div class="preview-image">
+                    <img src="Images/IndexCode.png" alt="Personal Website">
                 </div>
-                <div class="text-content">
-                    <h3>Personal Website</h3>
-                    <p>As an engineer looking to gain internships as well as build a neat portfolio, a website is the perfect thing to build. I chose to code my own website as I felt that it would give me some experience with Web Development as well as allow my creativity and vision to be shown. I wanted a website that looked slick and showed off my projects and experience in a professional manner. You have the ability to explore the website if you would like, but the photos here show glimpses of some of my preview sketches as well as some of my code.</p>
-                    <p>When I was planning my website out, I based a lot of my ideas off of other clean software developer websites. Many of them had those crazy transitions that I wanted to try out, and I got a couple of them on my website here. I think the main goals I had were to create a couple of pages: one home page, one projects page, one experience page, and one contact page. In laying it out, I also wanted to make sure to include a bunch of photos that would reflect the work I have done and show them off in a clean manner. If you would like to look more in-depth at my code, the files for this project are in my github.</p>
+                <div class="preview-content">
+                    <h3>Portfolio Website</h3>
+                    <p>A custom-built web portfolio designed to showcase my engineering projects, with clean design and modern transitions.</p>
+                    <a href="#website-details" class="learn-more" data-project="website">Learn More</a>
                 </div>
             </div>
-        </div>
-
-        <!-- Baja Ride Height Sensor -->
-        <div class="experience-content">
-            <div class="content-wrapper">
-                <div class="photo-album">
-                    <img id="baja-main-photo" src="PCB4.png" alt="Baja Ride Height Sensor" class="main-photo" onclick="openModal('PCB4.png')" style="position: relative;">
-                    <div id="baja-album" class="album" style="display: block;">
-                        <img src="PCB4.png" alt="Baja Ride Height Sensor" onclick="changeMainPhoto('baja-main-photo', this)">
-                        <img src="PCB3.png" alt="Baja Ride Height Sensor" onclick="changeMainPhoto('baja-main-photo', this)">
-                        <img src="PCB2.png" alt="Baja Ride Height Sensor" onclick="changeMainPhoto('baja-main-photo', this)">
-                        <img src="PCB1.png" alt="Baja Ride Height Sensor" onclick="changeMainPhoto('baja-main-photo', this)">
-                    </div>
+            
+            <!-- Baja Ride Height Sensor Preview -->
+            <div class="project-preview" data-project="baja">
+                <div class="preview-image">
+                    <img src="Images/PCB4.png" alt="Baja Ride Height Sensor">
                 </div>
-                <div class="text-content">
+                <div class="preview-content">
                     <h3>Baja Ride Height Module</h3>
-                    <p>The Olin Baja car experiences immense forces from sharp turns, jumps, and rough terrain. Understanding the forces acting on the suspension is crucial for both design calculations and performance testing. To address this, I helped develop a ride height measurement system that uses Raspberry Pi Picos to transmit sensor data via Bluetooth Low Energy (BLE) to a data aggregation model.</p>
-                    <p>To achieve this, we designed and built a custom PCB to interface with ride height sensors, which send voltage readings to a Raspberry Pi Pico. The Pico then transmits the data wirelessly to a computer for analysis. We wrote firmware to process the voltage readings, convert them to resistance, then to angular displacement, and finally to physical ride height and force. This data allowed the Baja suspension subteam to conduct test runs and gather insights for optimizing the next iteration of the car’s suspension system.</p>
+                    <p>A custom PCB and sensor system for measuring ride height data for the Olin Baja team's off-road vehicle.</p>
+                    <a href="#baja-details" class="learn-more" data-project="baja">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Project Detailed Sections -->
+        
+        <!-- Hopper Project Details -->
+        <div id="hopper-details" class="project-details" data-project="hopper">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Hopper Project</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="hopper-main-img" src="Images/Hopper.png" alt="Hopper Project">
+                        </div>
+                        <div class="photo-gallery">
+                            <img src="Images/Hopper.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
+                            <img src="Images/Hopper2.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
+                            <img src="Images/Hopper3.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
+                            <img src="Images/Hopper4.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openModal('hopper-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>In our engineering design class, Design Nature, we were tasked with designing a mechanical hopper inspired by a real-life hopping creature. To begin, we observed natural hoppers in the wild, using their movement as inspiration. Applying the engineering design process, we iterated through multiple prototypes before finalizing a design, which we presented on Hopper Day.</p>
+                        <p>My design was inspired by the click beetle and leveraged principles of center of mass and stored energy. Using rubber tubing, my hopper built up force that was released through a delayed trigger mechanism. This caused two masses to snap together, producing a clap sound while shifting the center of mass upward—ultimately propelling the hopper into the air.</p>
+                        <p>The project taught me valuable lessons about biomimicry, iterative design, and the importance of understanding fundamental physical principles when creating mechanical systems. It was fascinating to see how nature's solutions could inform engineering design choices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Personal Website Details -->
+        <div id="website-details" class="project-details" data-project="website">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Portfolio Website</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="website-main-img" src="Images/IndexCode.png" alt="Website Code">
+                        </div>
+                        <div class="photo-gallery">
+                            <img src="Images/IndexCode.png" alt="Website Code" onclick="changeDetailPhoto('website-main-img', this)">
+                            <img src="Images/HiImMichael.png" alt="Website Homepage" onclick="changeDetailPhoto('website-main-img', this)">
+                            <img src="Images/WebPlan.png" alt="Website Planning" onclick="changeDetailPhoto('website-main-img', this)">
+                            <img src="Images/JavaScript.png" alt="JavaScript Code" onclick="changeDetailPhoto('website-main-img', this)">
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openModal('website-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>As an engineer looking to gain internships as well as build a neat portfolio, a website is the perfect thing to build. I chose to code my own website as I felt that it would give me some experience with Web Development as well as allow my creativity and vision to be shown. I wanted a website that looked slick and showed off my projects and experience in a professional manner.</p>
+                        <p>When I was planning my website out, I based a lot of my ideas off of other clean software developer websites. Many of them had those crazy transitions that I wanted to try out, and I got a couple of them on my website here. I think the main goals I had were to create a couple of pages: one home page, one projects page, one experience page, and one contact page.</p>
+                        <p>In laying it out, I also wanted to make sure to include a bunch of photos that would reflect the work I have done and show them off in a clean manner. If you would like to look more in-depth at my code, the files for this project are in my GitHub. This project taught me valuable skills in HTML, CSS, and JavaScript while giving me a platform to showcase my engineering work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Baja Ride Height Sensor Details -->
+        <div id="baja-details" class="project-details" data-project="baja">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Baja Ride Height Module</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="baja-main-img" src="Images/PCB4.png" alt="PCB Design">
+                        </div>
+                        <div class="photo-gallery">
+                            <img src="Images/PCB4.png" alt="PCB Design" onclick="changeDetailPhoto('baja-main-img', this)">
+                            <img src="Images/PCB3.png" alt="PCB Implementation" onclick="changeDetailPhoto('baja-main-img', this)">
+                            <img src="Images/PCB2.png" alt="Circuit Design" onclick="changeDetailPhoto('baja-main-img', this)">
+                            <img src="Images/PCB1.png" alt="Testing" onclick="changeDetailPhoto('baja-main-img', this)">
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openModal('baja-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>The Olin Baja car experiences immense forces from sharp turns, jumps, and rough terrain. Understanding the forces acting on the suspension is crucial for both design calculations and performance testing. To address this, I helped develop a ride height measurement system that uses Raspberry Pi Picos to transmit sensor data via Bluetooth Low Energy (BLE) to a data aggregation model.</p>
+                        <p>To achieve this, we designed and built a custom PCB to interface with ride height sensors, which send voltage readings to a Raspberry Pi Pico. The Pico then transmits the data wirelessly to a computer for analysis. We wrote firmware to process the voltage readings, convert them to resistance, then to angular displacement, and finally to physical ride height and force.</p>
+                        <p>This data allowed the Baja suspension subteam to conduct test runs and gather insights for optimizing the next iteration of the car's suspension system. The project combined electrical engineering, programming, and mechanical knowledge to create a practical solution for real-world performance testing.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
+    <!-- Modal for full photo display -->
     <div id="photoModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <footer>
-        <footer>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/michael-ku-jr-512b70194/"target="_blank">LinkedIn</a></li>
-                <li><a href="mailto:michael.ku@outlook.com"target="_blank">Email</a></li>
-                <li><a href="https://www.instagram.com/mikey_ku24/"target="_blank">Instagram</a></li>
-                <li><a href="https://github.com/Mikey-Ku"target="_blank">GitHub</a></li>
-            </ul>
-        </footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/michael-ku-jr-512b70194/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="mailto:michael.ku@outlook.com" target="_blank"><i class="far fa-envelope"></i> Email</a></li>
+            <li><a href="https://www.instagram.com/mikey_ku24/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://github.com/Mikey-Ku" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        </ul>
     </footer>
 
     <script>
-        function changeMainPhoto(mainPhotoId, smallImg) {
-            var mainPhoto = document.getElementById(mainPhotoId);
-            mainPhoto.src = smallImg.src;
-            mainPhoto.onclick = function() {
-                openModal(smallImg.src);
-            };
+        // Show project details when "Learn More" is clicked
+        const learnMoreButtons = document.querySelectorAll('.learn-more');
+        const projectDetails = document.querySelectorAll('.project-details');
+        const closeButtons = document.querySelectorAll('.close-details');
+        
+        learnMoreButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const projectId = this.getAttribute('data-project');
+                
+                // Hide all project details
+                projectDetails.forEach(detail => {
+                    detail.classList.remove('active');
+                });
+                
+                // Show the selected project details
+                const targetDetail = document.querySelector(`.project-details[data-project="${projectId}"]`);
+                targetDetail.classList.add('active');
+                
+                // Smooth scroll to the details
+                targetDetail.scrollIntoView({behavior: 'smooth'});
+            });
+        });
+        
+        // Close project details
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const parentDetails = this.closest('.project-details');
+                parentDetails.classList.remove('active');
+                
+                // Scroll back to the grid
+                document.querySelector('.projects-grid').scrollIntoView({behavior: 'smooth'});
+            });
+        });
+        
+        // Function to change detail photo
+        function changeDetailPhoto(mainImgId, thumbnailImg) {
+            const mainImg = document.getElementById(mainImgId);
+            mainImg.src = thumbnailImg.src;
         }
-
-        function openModal(src) {
-            var modal = document.getElementById('photoModal');
-            var modalImg = document.getElementById('modalImage');
+        
+        // Function to open the modal
+        function openModal(imgId) {
+            const modal = document.getElementById('photoModal');
+            const modalImg = document.getElementById('modalImage');
+            const mainImg = document.getElementById(imgId);
+            
             modal.style.display = "flex";
-            modalImg.src = src;
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10);
+            modalImg.src = mainImg.src;
         }
+        
+        // Function to close the modal
         function closeModal() {
-            var modal = document.getElementById('photoModal');
-            modal.style.display = "none";
+            const modal = document.getElementById('photoModal');
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 400);
         }
+        
+        // Close modal when clicking outside the image
         window.onclick = function(event) {
-            var modal = document.getElementById('photoModal');
+            const modal = document.getElementById('photoModal');
             if (event.target == modal) {
                 closeModal();
             }
         };
+        
+        // Close modal when pressing the Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 closeModal();
+                
+                // Also close any active project details when pressing Escape
+                projectDetails.forEach(detail => {
+                    if (detail.classList.contains('active')) {
+                        detail.classList.remove('active');
+                    }
+                });
             }
+        });
+        
+        // Show/hide back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+        
+        // Add fade-in animation for grid items on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectPreviews = document.querySelectorAll('.project-preview');
+            
+            projectPreviews.forEach((preview, index) => {
+                setTimeout(() => {
+                    preview.classList.add('visible');
+                }, 100 * (index + 1));
+            });
         });
     </script>
 </body>
