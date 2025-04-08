@@ -123,7 +123,7 @@ nav ul li a:hover {
 /* Enhanced Hero Section */
 #hero {
     position: relative;
-    background: url('Background.avif') no-repeat center center/cover;
+    background: url('Images/Homepage.gif') no-repeat center center/cover;
     color: var(--secondary-color);
     text-align: center;
     padding: 10rem 1rem;

@@ -30,26 +30,14 @@
         
         <!-- Projects Grid Preview -->
         <div class="projects-grid">
-            <!-- Hopper Project Preview -->
-            <div class="project-preview" data-project="hopper">
-                <div class="preview-image">
-                    <img src="Images/Hopper.png" alt="Hopper Project">
-                </div>
-                <div class="preview-content">
-                    <h3>Hopper Project</h3>
-                    <p>A mechanical design project inspired by the click beetle's hopping mechanism, applying engineering principles to create a unique hopping device.</p>
-                    <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
-                </div>
-            </div>
-            
             <!-- Personal Website Preview -->
             <div class="project-preview" data-project="website">
                 <div class="preview-image">
-                    <img src="Images/IndexCode.png" alt="Personal Website">
+                    <img src="Images/CoverHoop.png" alt="Customized Mini Hoop">
                 </div>
                 <div class="preview-content">
-                    <h3>Portfolio Website</h3>
-                    <p>A custom-built web portfolio designed to showcase my engineering projects, with clean design and modern transitions.</p>
+                    <h3>Custom Mini Hoop</h3>
+                    <p>A custom mini basketball hoop with LEDs, Ultrasonic sensor, and buzzer all controlled by a Arduino Uno.</p>
                     <a href="#website-details" class="learn-more" data-project="website">Learn More</a>
                 </div>
             </div>
@@ -65,7 +53,21 @@
                     <a href="#baja-details" class="learn-more" data-project="baja">Learn More</a>
                 </div>
             </div>
+
+            <!-- Hopper Project Preview -->
+            <div class="project-preview" data-project="hopper">
+                <div class="preview-image">
+                    <img src="Images/Hopper.png" alt="Hopper Project">
+                </div>
+                <div class="preview-content">
+                    <h3>Hopper Project</h3>
+                    <p>A mechanical design project inspired by the click beetle's hopping mechanism, applying engineering principles to create a unique hopping device.</p>
+                    <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
+                </div>
+            </div>
         </div>
+
+        
         
         <!-- Project Detailed Sections -->
         
@@ -82,12 +84,20 @@
                             <img id="hopper-main-img" src="Images/Hopper.png" alt="Hopper Project">
                         </div>
                         <div class="photo-gallery">
-                            <img src="Images/Hopper.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
-                            <img src="Images/Hopper2.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
-                            <img src="Images/Hopper3.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
-                            <img src="Images/Hopper4.png" alt="Hopper" onclick="changeDetailPhoto('hopper-main-img', this)">
+                            <div class="thumbnail active" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper.png', false)">
+                                <img src="Images/Hopper.png" alt="Hopper">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper2.png', false)">
+                                <img src="Images/Hopper2.png" alt="Hopper">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper3.png', false)">
+                                <img src="Images/Hopper3.png" alt="Hopper">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper4.png', false)">
+                                <img src="Images/Hopper4.png" alt="Hopper">
+                            </div>
                         </div>
-                        <a href="#" class="view-full-photo" onclick="openModal('hopper-main-img')">View Full Size</a>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('hopper-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
                         <p>In our engineering design class, Design Nature, we were tasked with designing a mechanical hopper inspired by a real-life hopping creature. To begin, we observed natural hoppers in the wild, using their movement as inspiration. Applying the engineering design process, we iterated through multiple prototypes before finalizing a design, which we presented on Hopper Day.</p>
@@ -98,30 +108,42 @@
             </div>
         </div>
         
-        <!-- Personal Website Details -->
+        <!-- Mini Hoop Details -->
         <div id="website-details" class="project-details" data-project="website">
             <div class="details-container">
                 <div class="details-header">
-                    <h3>Portfolio Website</h3>
+                    <h3>Customized Mini Hoop</h3>
                     <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
                 </div>
                 <div class="details-content">
                     <div class="photos-container">
                         <div class="main-photo">
-                            <img id="website-main-img" src="Images/IndexCode.png" alt="Website Code">
+                            <!-- Replace static image with video as main content -->
+                            <video id="website-main-video" src="Videos/IMG_8407.mov" controls width="100%" style="height: 100%; object-fit: cover;">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                         <div class="photo-gallery">
-                            <img src="Images/IndexCode.png" alt="Website Code" onclick="changeDetailPhoto('website-main-img', this)">
-                            <img src="Images/HiImMichael.png" alt="Website Homepage" onclick="changeDetailPhoto('website-main-img', this)">
-                            <img src="Images/WebPlan.png" alt="Website Planning" onclick="changeDetailPhoto('website-main-img', this)">
-                            <img src="Images/JavaScript.png" alt="JavaScript Code" onclick="changeDetailPhoto('website-main-img', this)">
+                            <div class="thumbnail video-thumbnail active" onclick="changeDetailMedia('website-main-video', 'Videos/IMG_8407.mov', true)">
+                                <img src="Images/CoverHoop.png" alt="Basketball Hoop Demo">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', 'Images/HoopBack.jpg', false)">
+                                <img src="Images/HoopBack.jpg" alt="Back of Hoop">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', 'Images/HoopSensor.jpg', false)">
+                                <img src="Images/HoopSensor.jpg" alt="Front View of Hoop">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', 'Images/CoverHoop.png', false)">
+                                <img src="Images/CoverHoop.png" alt="Main Image of Hoop">
+                            </div>
                         </div>
-                        <a href="#" class="view-full-photo" onclick="openModal('website-main-img')">View Full Size</a>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('website-main-video')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>As an engineer looking to gain internships as well as build a neat portfolio, a website is the perfect thing to build. I chose to code my own website as I felt that it would give me some experience with Web Development as well as allow my creativity and vision to be shown. I wanted a website that looked slick and showed off my projects and experience in a professional manner.</p>
-                        <p>When I was planning my website out, I based a lot of my ideas off of other clean software developer websites. Many of them had those crazy transitions that I wanted to try out, and I got a couple of them on my website here. I think the main goals I had were to create a couple of pages: one home page, one projects page, one experience page, and one contact page.</p>
-                        <p>In laying it out, I also wanted to make sure to include a bunch of photos that would reflect the work I have done and show them off in a clean manner. If you would like to look more in-depth at my code, the files for this project are in my GitHub. This project taught me valuable skills in HTML, CSS, and JavaScript while giving me a platform to showcase my engineering work.</p>
+                        <p>I developed a mini basketball hoop enhanced with Arduino technology that responds to successful shots in real-time. Using an ultrasonic sensor, the system detects when a ball passes through the hoop, triggering celebration sounds and green LED flashes.</p>
+                        <p>The project was coded entirely in C++ using the Arduino IDE, implementing efficient state management routines and leveraging the FastLED library for smooth light animations. My code handles sensor input processing, precise timing controls, and interrupt-driven sound generation through the buzzer.</p>
+                        <p>When idle, the system displays custom light patterns across the addressable LEDs, creating an engaging ambient experience. The combination of hardware integration and optimized C++ programming delivers a responsive basketball experience that enhances traditional play with interactive electronic feedback.</p>
                     </div>
                 </div>
             </div>
@@ -140,12 +162,20 @@
                             <img id="baja-main-img" src="Images/PCB4.png" alt="PCB Design">
                         </div>
                         <div class="photo-gallery">
-                            <img src="Images/PCB4.png" alt="PCB Design" onclick="changeDetailPhoto('baja-main-img', this)">
-                            <img src="Images/PCB3.png" alt="PCB Implementation" onclick="changeDetailPhoto('baja-main-img', this)">
-                            <img src="Images/PCB2.png" alt="Circuit Design" onclick="changeDetailPhoto('baja-main-img', this)">
-                            <img src="Images/PCB1.png" alt="Testing" onclick="changeDetailPhoto('baja-main-img', this)">
+                            <div class="thumbnail active" onclick="changeDetailMedia('baja-main-img', 'Images/PCB4.png', false)">
+                                <img src="Images/PCB4.png" alt="PCB Design">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', 'Images/PCB3.png', false)">
+                                <img src="Images/PCB3.png" alt="PCB Implementation">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', 'Images/PCB2.png', false)">
+                                <img src="Images/PCB2.png" alt="Circuit Design">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', 'Images/PCB1.png', false)">
+                                <img src="Images/PCB1.png" alt="Testing">
+                            </div>
                         </div>
-                        <a href="#" class="view-full-photo" onclick="openModal('baja-main-img')">View Full Size</a>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('baja-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
                         <p>The Olin Baja car experiences immense forces from sharp turns, jumps, and rough terrain. Understanding the forces acting on the suspension is crucial for both design calculations and performance testing. To address this, I helped develop a ride height measurement system that uses Raspberry Pi Picos to transmit sensor data via Bluetooth Low Energy (BLE) to a data aggregation model.</p>
@@ -157,7 +187,7 @@
         </div>
     </section>
     
-    <!-- Modal for full photo display -->
+    <!-- Modal for full photo/video display -->
     <div id="photoModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -213,28 +243,100 @@
             });
         });
         
-        // Function to change detail photo
-        function changeDetailPhoto(mainImgId, thumbnailImg) {
-            const mainImg = document.getElementById(mainImgId);
-            mainImg.src = thumbnailImg.src;
+        // Function to change detail media (handles both photos and video)
+        function changeDetailMedia(elementId, mediaSource, isVideo) {
+            const element = document.getElementById(elementId);
+            
+            // Update the active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+            
+            if (isVideo) {
+                // If element is already a video
+                if (element.tagName === 'VIDEO') {
+                    element.src = mediaSource;
+                    element.load(); // Reload the video with new source
+                } else {
+                    // Need to replace image with video
+                    const parent = element.parentNode;
+                    const video = document.createElement('video');
+                    video.id = elementId;
+                    video.src = mediaSource;
+                    video.controls = true;
+                    video.style.width = '100%';
+                    video.style.height = '100%';
+                    video.style.objectFit = 'cover';
+                    parent.replaceChild(video, element);
+                }
+            } else {
+                // If we need to replace video with image
+                if (element.tagName === 'VIDEO') {
+                    const parent = element.parentNode;
+                    const img = document.createElement('img');
+                    img.id = elementId;
+                    img.src = mediaSource;
+                    img.alt = "Mini Hoop Project";
+                    parent.replaceChild(img, element);
+                } else {
+                    // Simply update the image source
+                    element.src = mediaSource;
+                }
+            }
         }
         
-        // Function to open the modal
-        function openModal(imgId) {
+        // Function to open modal for both images and videos
+        function openMediaModal(elementId) {
             const modal = document.getElementById('photoModal');
-            const modalImg = document.getElementById('modalImage');
-            const mainImg = document.getElementById(imgId);
+            const modalContent = document.getElementById('modalImage');
+            const element = document.getElementById(elementId);
             
             modal.style.display = "flex";
+            
+            // If it's a video
+            if (element.tagName === 'VIDEO') {
+                // Create a new video element for the modal
+                const modalVideo = document.createElement('video');
+                modalVideo.src = element.src;
+                modalVideo.controls = true;
+                modalVideo.autoplay = true;
+                modalVideo.className = 'modal-content';
+                modalVideo.id = 'modalImage';
+                
+                // Replace the modal image with video
+                modalContent.parentNode.replaceChild(modalVideo, modalContent);
+            } else {
+                // If it's standard image handling
+                const modalImg = document.getElementById('modalImage');
+                if (modalImg.tagName !== 'IMG') {
+                    // Replace video with image if needed
+                    const img = document.createElement('img');
+                    img.className = 'modal-content';
+                    img.id = 'modalImage';
+                    img.src = element.src;
+                    modalImg.parentNode.replaceChild(img, modalImg);
+                } else {
+                    modalImg.src = element.src;
+                }
+            }
+            
             setTimeout(() => {
                 modal.classList.add('show');
             }, 10);
-            modalImg.src = mainImg.src;
         }
         
-        // Function to close the modal
+        // Enhanced modal close function to handle video pause
         function closeModal() {
             const modal = document.getElementById('photoModal');
+            const modalContent = document.getElementById('modalImage');
+            
+            // If it's a video, pause it
+            if (modalContent.tagName === 'VIDEO') {
+                modalContent.pause();
+            }
+            
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.style.display = "none";

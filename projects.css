@@ -318,6 +318,16 @@ section h2::after {
     transform: scale(1.05);
 }
 
+/* Video container styles */
+.main-photo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+/* Thumbnail styles */
 .photo-gallery {
     display: flex;
     gap: 0.8rem;
@@ -325,20 +335,47 @@ section h2::after {
     padding-bottom: 0.5rem;
 }
 
-.photo-gallery img {
+.photo-gallery .thumbnail {
     width: 80px;
     height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
+    position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
     border: 2px solid transparent;
 }
 
-.photo-gallery img:hover {
+.photo-gallery .thumbnail.active {
+    border-color: var(--accent-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-color: var(--accent-color);
+}
+
+.photo-gallery .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-gallery .video-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.photo-gallery .video-thumbnail i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    z-index: 2;
 }
 
 .details-text {
@@ -402,6 +439,13 @@ section h2::after {
 
 .modal.show .modal-content {
     transform: scale(1);
+}
+
+.modal-content video {
+    max-width: 100%;
+    max-height: 90vh;
+    background-color: #000;
+    border-radius: 8px;
 }
 
 .close {
