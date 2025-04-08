@@ -30,19 +30,19 @@
         
         <!-- Projects Grid Preview -->
         <div class="projects-grid">
-            <!-- Personal Website Preview -->
-            <div class="project-preview" data-project="website">
+            <!-- Project 1: Custom Mini Hoop -->
+            <div class="project-preview" data-project="mini-hoop">
                 <div class="preview-image">
                     <img src="Images/CoverHoop.png" alt="Customized Mini Hoop">
                 </div>
                 <div class="preview-content">
                     <h3>Custom Mini Hoop</h3>
                     <p>A custom mini basketball hoop with LEDs, Ultrasonic sensor, and buzzer all controlled by a Arduino Uno.</p>
-                    <a href="#website-details" class="learn-more" data-project="website">Learn More</a>
+                    <a href="#minihoop-details" class="learn-more" data-project="mini-hoop">Learn More</a>
                 </div>
             </div>
             
-            <!-- Baja Ride Height Sensor Preview -->
+            <!-- Project 2: Baja Ride Height Sensor -->
             <div class="project-preview" data-project="baja">
                 <div class="preview-image">
                     <img src="Images/PCB4.png" alt="Baja Ride Height Sensor">
@@ -53,8 +53,20 @@
                     <a href="#baja-details" class="learn-more" data-project="baja">Learn More</a>
                 </div>
             </div>
+            
+            <!-- Project 3: AI Fridge Camera -->
+            <div class="project-preview" data-project="Fridge">
+                <div class="preview-image">
+                    <img src="Images/Camera.jpg" alt="Fridge Camera">
+                </div>
+                <div class="preview-content">
+                    <h3>AI Fridge Camera</h3>
+                    <p>A OpenAI based module that tracks what Items go in and out of a fridge and provides recipies to reduce food waste</p>
+                    <a href="#Fridge-details" class="learn-more" data-project="Fridge">Learn More</a>
+                </div>
+            </div>
 
-            <!-- Hopper Project Preview -->
+            <!-- Project 4: Hopper Project -->
             <div class="project-preview" data-project="hopper">
                 <div class="preview-image">
                     <img src="Images/Hopper.png" alt="Hopper Project">
@@ -65,9 +77,32 @@
                     <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
                 </div>
             </div>
+            
+            <!-- Project 5: Baseball Salary Scraper -->
+            <div class="project-preview" data-project="Baseball">
+                <div class="preview-image">
+                    <img src="Images/FangraphsLogo.png" alt="Baseball Scraper">
+                </div>
+                <div class="preview-content">
+                    <h3>Baseball Salary Scraper</h3>
+                    <p>A python script that scrapes both baseball salaries and stats from FanGraphs and Spotrac.</p>
+                    <a href="#baseball-details" class="learn-more" data-project="Baseball">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Project 6: Scam Simulation -->
+            <div class="project-preview" data-project="Scam">
+                <div class="preview-image">
+                    <img src="Images/Scam.png" alt="Scam Simulation">
+                </div>
+                <div class="preview-content">
+                    <h3>Call Center Scam Simulation</h3>
+                    <p>A Matlab script that takes note of SIR model and networks to predict call center money loss.</p>
+                    <a href="#Scam-details" class="learn-more" data-project="Scam">Learn More</a>
+                </div>
+            </div>
         </div>
 
-        
         
         <!-- Project Detailed Sections -->
         
@@ -109,7 +144,7 @@
         </div>
         
         <!-- Mini Hoop Details -->
-        <div id="website-details" class="project-details" data-project="website">
+        <div id="website-details" class="project-details" data-project="mini-hoop">
             <div class="details-container">
                 <div class="details-header">
                     <h3>Customized Mini Hoop</h3>
@@ -181,6 +216,84 @@
                         <p>The Olin Baja car experiences immense forces from sharp turns, jumps, and rough terrain. Understanding the forces acting on the suspension is crucial for both design calculations and performance testing. To address this, I helped develop a ride height measurement system that uses Raspberry Pi Picos to transmit sensor data via Bluetooth Low Energy (BLE) to a data aggregation model.</p>
                         <p>To achieve this, we designed and built a custom PCB to interface with ride height sensors, which send voltage readings to a Raspberry Pi Pico. The Pico then transmits the data wirelessly to a computer for analysis. We wrote firmware to process the voltage readings, convert them to resistance, then to angular displacement, and finally to physical ride height and force.</p>
                         <p>This data allowed the Baja suspension subteam to conduct test runs and gather insights for optimizing the next iteration of the car's suspension system. The project combined electrical engineering, programming, and mechanical knowledge to create a practical solution for real-world performance testing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Fridge Camera Details-->
+        <div id="#Fridge-details" class="project-details" data-project="Fridge">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Project 4</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="project4-main-img" src="Images/Camera.jpg" alt="Fridge Camera">
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('project4-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>Food waste is a huge issue around the world and can be heavily found in households around the US. A majority of that comes from forgotten food that goes bad in the back of fridges. To solve this I have built a AI camera module that detects when food objects enter and leave a fridge while also marking down when the object first entered. In addition to this food logging, we wil provide the user with recipes that will allow them to use their leftover ingredients in a delicious manner and prevent food waste.</p>
+                        <p>Currently we are still working on a final product but updates will be coming soon!</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        <!-- Baseball Stat and Contract Scraper Details-->
+        <div id="baseball-details" class="project-details" data-project="Baseball">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Baseball Contract and Stat Scraper</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="project5-main-img" src="Images/FangraphsLogo.png" alt="Project 5">
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('project5-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>Baseball is one of the only sports that does not have a salary cap and it creates interesting dynamics across the league. As a avid sports fan seeing how contracts correlate to performance is something super interesting to me. However there was no clear way to get pull the data I wanted from the league in a efficient and timely manner. As a result I wanted to build a script/jupyter notebook that allowed me to pull data with ease and make meaningful plots that I wanted whenever I wanted.</p>
+                        <p>To do this I used the requests and beautiful soup library to pull and organize the data. Then I use the matplotlib library to plot my data. If you would like to see more, you can look at the repository for this project right here <a href="#" target="_blank">GitHub Repository</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scam Simulation Details -->
+        <div id="project6-details" class="project-details" data-project="Scam">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Call Center Scam Simulation</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="project6-main-img" src="Images/Scam.png" alt="Scam graphs">
+                        </div>
+                        <div class="photo-gallery">
+                            <div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/Scam.png', false)">
+                                <img src="Images/Scam.png" alt="Project 6 Image 1">
+                            </div>
+                            <div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/PossionDistr.png', false)">
+                                <img src="Images/PossionDistr.png" alt="Project 6 Image 1">
+                            </div><div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/NegativeBinomial.png', false)">
+                                <img src="Images/NegativeBinomial.png" alt="Project 6 Image 1">
+                            </div><div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/NormDistr.png', false)">
+                                <img src="Images/NormDistr.png" alt="Project 6 Image 1">
+                            </div>
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('project6-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>For my model and simulation course, we decided to use distributions to build a simulation of call centers and how much money these make people lose. To do this we used three sets of distributions. Possion for the number of calls made. Negative binomial for the amount of successful calls out of those calls, and the a normal distribution to determine how much money was lost from each of those calls. Taking those distributions into account, you can see the line we were able to find.</p>
+                        <p>you can scroll through the images on the left to see all the distributions. If you would like to see our computational essay on this topic. You can find it right here <a href="#" target="_blank">link</a>.</p>
                     </div>
                 </div>
             </div>
