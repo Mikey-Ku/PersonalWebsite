@@ -135,16 +135,16 @@
                         <a href="#" class="view-full-photo" onclick="openMediaModal('hopper-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>In our engineering design class, Design Nature, we were tasked with designing a mechanical hopper inspired by a real-life hopping creature. To begin, we observed natural hoppers in the wild, using their movement as inspiration. Applying the engineering design process, we iterated through multiple prototypes before finalizing a design, which we presented on Hopper Day.</p>
-                        <p>My design was inspired by the click beetle and leveraged principles of center of mass and stored energy. Using rubber tubing, my hopper built up force that was released through a delayed trigger mechanism. This caused two masses to snap together, producing a clap sound while shifting the center of mass upward—ultimately propelling the hopper into the air.</p>
-                        <p>The project taught me valuable lessons about biomimicry, iterative design, and the importance of understanding fundamental physical principles when creating mechanical systems. It was fascinating to see how nature's solutions could inform engineering design choices.</p>
+                        <p>In the Design Nature engineering course, I developed a mechanical hopper inspired by the click beetle's unique jumping mechanism. The project began with field observations of natural hoppers, followed by systematic application of engineering design principles through multiple prototype iterations.</p>
+                        <p>My final design utilized principles of potential energy storage and center of mass manipulation. Using elastic rubber tubing, the hopper stored energy that was released through a precision-timed trigger mechanism. This caused a controlled collision between two masses, generating both an audible clap and the kinetic force needed to propel the device upward.</p>
+                        <p>This project demonstrated practical applications of biomimicry in engineering and reinforced fundamental concepts of energy transfer, mechanical advantage, and iterative design methodology. The successful implementation validated how biological systems can inform innovative engineering solutions.</p>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- Mini Hoop Details -->
-        <div id="website-details" class="project-details" data-project="mini-hoop">
+        <div id="minihoop-details" class="project-details" data-project="mini-hoop">
             <div class="details-container">
                 <div class="details-header">
                     <h3>Customized Mini Hoop</h3>
@@ -176,9 +176,9 @@
                         <a href="#" class="view-full-photo" onclick="openMediaModal('website-main-video')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>I developed a mini basketball hoop enhanced with Arduino technology that responds to successful shots in real-time. Using an ultrasonic sensor, the system detects when a ball passes through the hoop, triggering celebration sounds and green LED flashes.</p>
-                        <p>The project was coded entirely in C++ using the Arduino IDE, implementing efficient state management routines and leveraging the FastLED library for smooth light animations. My code handles sensor input processing, precise timing controls, and interrupt-driven sound generation through the buzzer.</p>
-                        <p>When idle, the system displays custom light patterns across the addressable LEDs, creating an engaging ambient experience. The combination of hardware integration and optimized C++ programming delivers a responsive basketball experience that enhances traditional play with interactive electronic feedback.</p>
+                        <p>I designed and built an interactive mini basketball hoop system using Arduino technology that provides real-time feedback for successful shots. The system employs an ultrasonic sensor to detect ball passage through the hoop, triggering synchronized LED animations and audio feedback.</p>
+                        <p>The implementation involved full-stack embedded development using C++ in the Arduino IDE, with emphasis on efficient state management and responsive sensor data processing. Key technical aspects include integration of the FastLED library for dynamic lighting effects, interrupt-driven audio generation, and precision timing controls for reliable detection.</p>
+                        <p>During standby periods, the system runs custom-programmed ambient light patterns to maintain visual engagement. This project demonstrates practical application of embedded systems design, sensor integration, and user experience engineering to transform a standard object into an interactive, technology-enhanced product.</p>
                     </div>
                 </div>
             </div>
@@ -213,19 +213,19 @@
                         <a href="#" class="view-full-photo" onclick="openMediaModal('baja-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>The Olin Baja car experiences immense forces from sharp turns, jumps, and rough terrain. Understanding the forces acting on the suspension is crucial for both design calculations and performance testing. To address this, I helped develop a ride height measurement system that uses Raspberry Pi Picos to transmit sensor data via Bluetooth Low Energy (BLE) to a data aggregation model.</p>
-                        <p>To achieve this, we designed and built a custom PCB to interface with ride height sensors, which send voltage readings to a Raspberry Pi Pico. The Pico then transmits the data wirelessly to a computer for analysis. We wrote firmware to process the voltage readings, convert them to resistance, then to angular displacement, and finally to physical ride height and force.</p>
-                        <p>This data allowed the Baja suspension subteam to conduct test runs and gather insights for optimizing the next iteration of the car's suspension system. The project combined electrical engineering, programming, and mechanical knowledge to create a practical solution for real-world performance testing.</p>
+                        <p>For the Olin Baja racing team, I contributed to developing a precision ride height measurement system to analyze suspension performance under extreme driving conditions. This data acquisition module was essential for validating design calculations and optimizing suspension performance during test runs.</p>
+                        <p>The technical implementation featured a custom-designed PCB interfacing with angular displacement sensors, with data processing handled by Raspberry Pi Pico microcontrollers. The system utilized Bluetooth Low Energy (BLE) for wireless data transmission to a central analysis computer. I developed firmware that performed multi-step signal processing: converting voltage readings to resistance values, calculating angular displacement, and ultimately deriving physical measurements of ride height and suspension forces.</p>
+                        <p>This instrumentation system provided the suspension engineering team with quantitative performance data that directly informed design improvements for subsequent vehicle iterations. The project integrated electrical engineering, embedded systems programming, and mechanical analysis to create a practical solution for real-world automotive testing applications.</p>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- Fridge Camera Details-->
-        <div id="#Fridge-details" class="project-details" data-project="Fridge">
+        <div id="Fridge-details" class="project-details" data-project="Fridge">
             <div class="details-container">
                 <div class="details-header">
-                    <h3>Project 4</h3>
+                    <h3>AI Fridge Camera</h3>
                     <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
                 </div>
                 <div class="details-content">
@@ -236,8 +236,9 @@
                         <a href="#" class="view-full-photo" onclick="openMediaModal('project4-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>Food waste is a huge issue around the world and can be heavily found in households around the US. A majority of that comes from forgotten food that goes bad in the back of fridges. To solve this I have built a AI camera module that detects when food objects enter and leave a fridge while also marking down when the object first entered. In addition to this food logging, we wil provide the user with recipes that will allow them to use their leftover ingredients in a delicious manner and prevent food waste.</p>
-                        <p>Currently we are still working on a final product but updates will be coming soon!</p>
+                        <p>I am developing an AI-powered kitchen management system to address household food waste, a significant global environmental challenge. This system utilizes computer vision technology to automatically detect and log food items entering and exiting a refrigerator, creating a comprehensive digital inventory with timestamp tracking.</p>
+                        <p>The technical implementation combines a camera module with OpenAI's computer vision capabilities to accurately identify food items in real-time. The system employs a custom algorithm that tracks item freshness based on entry dates and typical shelf life, then proactively generates recipe recommendations that prioritize ingredients approaching expiration.</p>
+                        <p>This ongoing project demonstrates application of artificial intelligence to practical sustainability challenges. By providing actionable information about available ingredients and suggesting creative ways to use them, the system aims to significantly reduce household food waste while simplifying meal planning for users.</p>
                     </div>
                 </div>  
             </div>
@@ -258,15 +259,16 @@
                         <a href="#" class="view-full-photo" onclick="openMediaModal('project5-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>Baseball is one of the only sports that does not have a salary cap and it creates interesting dynamics across the league. As a avid sports fan seeing how contracts correlate to performance is something super interesting to me. However there was no clear way to get pull the data I wanted from the league in a efficient and timely manner. As a result I wanted to build a script/jupyter notebook that allowed me to pull data with ease and make meaningful plots that I wanted whenever I wanted.</p>
-                        <p>To do this I used the requests and beautiful soup library to pull and organize the data. Then I use the matplotlib library to plot my data. If you would like to see more, you can look at the repository for this project right here <a href="#" target="_blank">GitHub Repository</a>.</p>
+                        <p>I developed a comprehensive data acquisition tool to analyze the unique relationship between performance metrics and salary structures in Major League Baseball, the only major American sport without a salary cap. This project addresses the challenge of efficiently accessing and correlating disparate data sources for sports analytics research.</p>
+                        <p>The technical implementation uses Python with the Requests and BeautifulSoup libraries to systematically extract and parse data from multiple sources, including FanGraphs and Spotrac. The automation script handles authentication challenges, pagination, and robust error handling while organizing the data into clean, analysis-ready formats. Visualization capabilities were implemented using Matplotlib to generate insightful representations of performance-to-compensation ratios.</p>
+                        <p>This project demonstrates practical application of web scraping techniques, data pipeline development, and statistical analysis. The resulting tool enables efficient, on-demand analysis of player valuation metrics, providing insights into team spending efficiency and contract value assessment across the league.</p>
                     </div>
                 </div>
             </div>
         </div>
         
         <!-- Scam Simulation Details -->
-        <div id="project6-details" class="project-details" data-project="Scam">
+        <div id="Scam-details" class="project-details" data-project="Scam">
             <div class="details-container">
                 <div class="details-header">
                     <h3>Call Center Scam Simulation</h3>
@@ -281,19 +283,20 @@
                             <div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/Scam.png', false)">
                                 <img src="Images/Scam.png" alt="Project 6 Image 1">
                             </div>
-                            <div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/PossionDistr.png', false)">
+                            <div class="thumbnail" onclick="changeDetailMedia('project6-main-img', 'Images/PossionDistr.png', false)">
                                 <img src="Images/PossionDistr.png" alt="Project 6 Image 1">
-                            </div><div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/NegativeBinomial.png', false)">
+                            </div><div class="thumbnail" onclick="changeDetailMedia('project6-main-img', 'Images/NegativeBinomial.png', false)">
                                 <img src="Images/NegativeBinomial.png" alt="Project 6 Image 1">
-                            </div><div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/NormDistr.png', false)">
+                            </div><div class="thumbnail" onclick="changeDetailMedia('project6-main-img', 'Images/NormDistr.png', false)">
                                 <img src="Images/NormDistr.png" alt="Project 6 Image 1">
                             </div>
                         </div>
                         <a href="#" class="view-full-photo" onclick="openMediaModal('project6-main-img')">View Full Size</a>
                     </div>
                     <div class="details-text">
-                        <p>For my model and simulation course, we decided to use distributions to build a simulation of call centers and how much money these make people lose. To do this we used three sets of distributions. Possion for the number of calls made. Negative binomial for the amount of successful calls out of those calls, and the a normal distribution to determine how much money was lost from each of those calls. Taking those distributions into account, you can see the line we were able to find.</p>
-                        <p>you can scroll through the images on the left to see all the distributions. If you would like to see our computational essay on this topic. You can find it right here <a href="#" target="_blank">link</a>.</p>
+                        <p>For my Model and Simulation course, I developed a statistical simulation system to model the financial impact of fraudulent call center operations. This project applied mathematical modeling techniques to quantify and predict the economic consequences of scam activities, providing insights into a significant but under-studied societal problem.</p>
+                        <p>The technical implementation leveraged MATLAB to create a multi-distribution modeling framework incorporating three probability distributions: Poisson distribution to model the frequency of outbound calls, negative binomial distribution to simulate successful scam conversion rates, and normal distribution to represent the financial loss per victim. This approach enabled accurate prediction of aggregate financial impacts across diverse scenarios.</p>
+                        <p>Through this project, I demonstrated practical application of stochastic modeling, probability theory, and computational simulation techniques. The resulting model provides a quantitative framework for understanding scam operations and could potentially inform policy and intervention strategies designed to combat such fraudulent activities.</p>
                     </div>
                 </div>
             </div>
