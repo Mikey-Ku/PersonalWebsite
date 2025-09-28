@@ -31,7 +31,7 @@
         <div class="experience-content">
             <div class="content-wrapper">
                 <div class="photo-album">
-                    <img id="innovationForceLogo" src="Images/innovationForceLogo.png" alt="Innovation Force logo" class="main-photo" onclick="openModal('Images/InnovationForceLogo.png')">
+                    <img id="innovationForceLogo" src="Images/innovationForce.png" alt="Innovation Force logo" class="main-photo" onclick="openModal('Images/InnovationForce.png')">
                 </div>
                 <div class="text-content">
                     <h3>InnovationForce</h3>
@@ -70,6 +70,19 @@
         </div>
 
         <h2>Non-Technical Experience</h2>
+        <!-- Ascend Pan-Asian Leadership -->
+        <div class="experience-content">
+            <div class="content-wrapper">
+                <div class="photo-album">
+                    <img id="Ascend" src="Images/AscendLogo.png" alt="Ascend Logo" class="main-photo" onclick="openModal('Images/AscendLogo.png')">
+                </div>
+                <div class="text-content">
+                    <h3>Ascend Pan-Asian Leadership</h3>
+                    <p>Ascend is the largest, non-profit Pan-Asian organization in North America dedicated to empowering students and professionals through leadership development, mentorship, and community engagement. It offers national conferences, scholarships, and a broad network of corporate and campus chapters to help members grow their skills, gain visibility, and advance their careers.</p>
+                    <p>As President and Founder of Olin Ascend, I built the club from the ground up by fostering a collaborative community and empowering students from multiple schools. I brought in guest speakers, created programs that connected students to Ascend’s larger network, and provided members with access to resources and opportunities to support and advance their careers.</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Varsity Tutors -->
         <div class="experience-content">
@@ -101,71 +114,8 @@
         </ul>
     </footer>
 
-    <script>
-        // Function to open the modal with the full photo
-        function openModal(src) {
-            var modal = document.getElementById('photoModal');
-            var modalImg = document.getElementById('modalImage');
-            modal.style.display = "flex";
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 10);
-            modalImg.src = src;
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            var modal = document.getElementById('photoModal');
-            modal.classList.remove('show');
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 400);
-        }
-
-        // Close modal when clicking outside the image
-        window.onclick = function(event) {
-            var modal = document.getElementById('photoModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        };
-
-        // Close modal when pressing the Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-            }
-        });
-
-        // Scroll animation for experience content elements
-        document.addEventListener('DOMContentLoaded', function() {
-            const experienceElements = document.querySelectorAll('.experience-content');
-            
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-                    rect.bottom >= 0
-                );
-            }
-            
-            function handleScrollAnimation() {
-                experienceElements.forEach((item, index) => {
-                    if (isInViewport(item)) {
-                        // Add delay based on index for staggered animation
-                        setTimeout(() => {
-                            item.classList.add('visible');
-                        }, 150 * index);
-                    }
-                });
-            }
-            
-            // Run once on load
-            handleScrollAnimation();
-            
-            // Add event listener for scroll
-            window.addEventListener('scroll', handleScrollAnimation);
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/experiences.js" defer></script>
 </body>
 </html>

@@ -120,6 +120,16 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* Active nav link */
+nav ul li a.active,
+nav ul li a[aria-current="page"] {
+    color: var(--accent-color);
+}
+nav ul li a.active::after,
+nav ul li a[aria-current="page"]::after {
+    width: 100%;
+}
+
 /* Contact Section Enhancement */
 #contact-info {
     padding: 4rem 2rem;

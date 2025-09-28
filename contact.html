@@ -77,34 +77,8 @@
         </ul>
     </footer>
 
-    <!-- JavaScript for animations -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Function to check if element is in viewport
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.bottom >= 0
-                );
-            }
-            
-            // Function to handle scroll animations
-            function handleScrollAnimation() {
-                const form = document.getElementById('contact-form');
-                
-                if (isInViewport(form)) {
-                    form.style.opacity = '1';
-                    form.style.transform = 'translateY(0)';
-                }
-            }
-            
-            // Run once on load
-            handleScrollAnimation();
-            
-            // Add event listener for scroll
-            window.addEventListener('scroll', handleScrollAnimation);
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </body>
 </html>

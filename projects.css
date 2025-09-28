@@ -120,6 +120,16 @@ nav ul li a:hover {
     transform: translateY(-2px);
 }
 
+/* Active nav link */
+nav ul li a.active,
+nav ul li a[aria-current="page"] {
+    color: var(--accent-color);
+}
+nav ul li a.active::after,
+nav ul li a[aria-current="page"]::after {
+    width: 100%;
+}
+
 /* Section Styles */
 section {
     padding: 4rem 2rem;
@@ -143,6 +153,50 @@ section h2::after {
     bottom: -10px;
     left: 25%;
     background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+/* Category Filter Bar */
+.projects-filter {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto 2rem;
+}
+
+.filter-btn {
+    border: 1px solid #d9def2;
+    background: #fff;
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.filter-btn.active {
+    background: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+}
+
+/* Subsections */
+.projects-section {
+    max-width: 1200px;
+    margin: 0 auto 2.5rem;
+    text-align: left;
+}
+
+.projects-section .section-subtitle {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin: 0 0 1.2rem 0.25rem;
 }
 
 /* Projects Grid */
@@ -179,6 +233,19 @@ section h2::after {
     height: 200px;
     overflow: hidden;
     position: relative;
+}
+
+.project-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(26,26,46,0.85);
+    color: #fff;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    z-index: 1;
 }
 
 .preview-image img {
@@ -566,6 +633,10 @@ footer ul li a:hover::after {
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    .projects-section .section-subtitle {
+        margin-left: 0;
+        text-align: center;
     }
     
     section {

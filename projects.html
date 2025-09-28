@@ -27,78 +27,100 @@
 
     <section id="projects">
         <h2>Engineering Projects</h2>
-        
-        <!-- Projects Grid Preview -->
-        <div class="projects-grid">
-            <!-- Project 1: Custom Mini Hoop -->
-            <div class="project-preview" data-project="mini-hoop">
-                <div class="preview-image">
-                    <img src="Images/CoverHoop.png" alt="Customized Mini Hoop">
-                </div>
-                <div class="preview-content">
-                    <h3>Custom Mini Hoop</h3>
-                    <p>A custom mini basketball hoop with LEDs, Ultrasonic sensor, and buzzer all controlled by a Arduino Uno.</p>
-                    <a href="#minihoop-details" class="learn-more" data-project="mini-hoop">Learn More</a>
-                </div>
-            </div>
-            
-            <!-- Project 2: Baja Ride Height Sensor -->
-            <div class="project-preview" data-project="baja">
-                <div class="preview-image">
-                    <img src="Images/PCB4.png" alt="Baja Ride Height Sensor">
-                </div>
-                <div class="preview-content">
-                    <h3>Baja Ride Height Module</h3>
-                    <p>A custom PCB and sensor system for measuring ride height data for the Olin Baja team's off-road vehicle.</p>
-                    <a href="#baja-details" class="learn-more" data-project="baja">Learn More</a>
-                </div>
-            </div>
-            
-            <!-- Project 3: AI Fridge Camera -->
-            <div class="project-preview" data-project="Fridge">
-                <div class="preview-image">
-                    <img src="Images/Camera.jpg" alt="Fridge Camera">
-                </div>
-                <div class="preview-content">
-                    <h3>AI Fridge Camera</h3>
-                    <p>A OpenAI based module that tracks what Items go in and out of a fridge and provides recipies to reduce food waste</p>
-                    <a href="#Fridge-details" class="learn-more" data-project="Fridge">Learn More</a>
-                </div>
-            </div>
 
-            <!-- Project 4: Hopper Project -->
-            <div class="project-preview" data-project="hopper">
-                <div class="preview-image">
-                    <img src="Images/Hopper.png" alt="Hopper Project">
+        <!-- Category Filters -->
+        <div class="projects-filter" aria-label="Project category filters">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="software" aria-pressed="false">Software</button>
+            <button class="filter-btn" data-filter="electrical" aria-pressed="false">Electrical</button>
+        </div>
+
+        <!-- Software Projects -->
+        <div class="projects-section" id="software">
+            <h3 class="section-subtitle">Software Projects</h3>
+            <div class="projects-grid">
+                <!-- AI Fridge Camera (Software) -->
+                <div class="project-preview" data-project="Fridge">
+                    <div class="preview-image">
+                        <span class="project-tag">Software</span>
+                        <img src="Images/Camera.jpg" alt="Fridge Camera">
+                    </div>
+                    <div class="preview-content">
+                        <h3>AI Fridge Camera</h3>
+                        <p>A OpenAI based module that tracks what Items go in and out of a fridge and provides recipies to reduce food waste</p>
+                        <a href="#Fridge-details" class="learn-more" data-project="Fridge">Learn More</a>
+                    </div>
                 </div>
-                <div class="preview-content">
-                    <h3>Hopper Project</h3>
-                    <p>A mechanical design project inspired by the click beetle's hopping mechanism, applying engineering principles to create a unique hopping device.</p>
-                    <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
+
+                <!-- Baseball Salary Scraper (Software) -->
+                <div class="project-preview" data-project="Baseball">
+                    <div class="preview-image">
+                        <span class="project-tag">Software</span>
+                        <img src="Images/FangraphsLogo.png" alt="Baseball Scraper">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Baseball Salary Scraper</h3>
+                        <p>A python script that scrapes both baseball salaries and stats from FanGraphs and Spotrac.</p>
+                        <a href="#baseball-details" class="learn-more" data-project="Baseball">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Call Center Scam Simulation (Software) -->
+                <div class="project-preview" data-project="Scam">
+                    <div class="preview-image">
+                        <span class="project-tag">Software</span>
+                        <img src="Images/Scam.png" alt="Scam Simulation">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Call Center Scam Simulation</h3>
+                        <p>A Matlab script that takes note of SIR model and networks to predict call center money loss.</p>
+                        <a href="#Scam-details" class="learn-more" data-project="Scam">Learn More</a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Project 5: Baseball Salary Scraper -->
-            <div class="project-preview" data-project="Baseball">
-                <div class="preview-image">
-                    <img src="Images/FangraphsLogo.png" alt="Baseball Scraper">
+        </div>
+
+        <!-- Electrical Projects -->
+        <div class="projects-section" id="electrical">
+            <h3 class="section-subtitle">Electrical Projects</h3>
+            <div class="projects-grid">
+                <!-- Custom Mini Hoop (Electrical) -->
+                <div class="project-preview" data-project="mini-hoop">
+                    <div class="preview-image">
+                        <span class="project-tag">Electrical</span>
+                        <img src="Images/CoverHoop.png" alt="Customized Mini Hoop">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Custom Mini Hoop</h3>
+                        <p>A custom mini basketball hoop with LEDs, Ultrasonic sensor, and buzzer all controlled by a Arduino Uno.</p>
+                        <a href="#minihoop-details" class="learn-more" data-project="mini-hoop">Learn More</a>
+                    </div>
                 </div>
-                <div class="preview-content">
-                    <h3>Baseball Salary Scraper</h3>
-                    <p>A python script that scrapes both baseball salaries and stats from FanGraphs and Spotrac.</p>
-                    <a href="#baseball-details" class="learn-more" data-project="Baseball">Learn More</a>
+
+                <!-- Baja Ride Height Sensor (Electrical) -->
+                <div class="project-preview" data-project="baja">
+                    <div class="preview-image">
+                        <span class="project-tag">Electrical</span>
+                        <img src="Images/PCB4.png" alt="Baja Ride Height Sensor">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Baja Ride Height Module</h3>
+                        <p>A custom PCB and sensor system for measuring ride height data for the Olin Baja team's off-road vehicle.</p>
+                        <a href="#baja-details" class="learn-more" data-project="baja">Learn More</a>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Project 6: Scam Simulation -->
-            <div class="project-preview" data-project="Scam">
-                <div class="preview-image">
-                    <img src="Images/Scam.png" alt="Scam Simulation">
-                </div>
-                <div class="preview-content">
-                    <h3>Call Center Scam Simulation</h3>
-                    <p>A Matlab script that takes note of SIR model and networks to predict call center money loss.</p>
-                    <a href="#Scam-details" class="learn-more" data-project="Scam">Learn More</a>
+
+                <!-- Hopper Project (Electrical/Mechanical) -->
+                <div class="project-preview" data-project="hopper">
+                    <div class="preview-image">
+                        <span class="project-tag">Electrical</span>
+                        <img src="Images/Hopper.png" alt="Hopper Project">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Hopper Project</h3>
+                        <p>A mechanical design project inspired by the click beetle's hopping mechanism, applying engineering principles to create a unique hopping device.</p>
+                        <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,191 +344,9 @@
             <li><a href="https://github.com/Mikey-Ku" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
         </ul>
     </footer>
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/projects.js" defer></script>
 
-    <script>
-        // Show project details when "Learn More" is clicked
-        const learnMoreButtons = document.querySelectorAll('.learn-more');
-        const projectDetails = document.querySelectorAll('.project-details');
-        const closeButtons = document.querySelectorAll('.close-details');
-        
-        learnMoreButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const projectId = this.getAttribute('data-project');
-                
-                // Hide all project details
-                projectDetails.forEach(detail => {
-                    detail.classList.remove('active');
-                });
-                
-                // Show the selected project details
-                const targetDetail = document.querySelector(`.project-details[data-project="${projectId}"]`);
-                targetDetail.classList.add('active');
-                
-                // Smooth scroll to the details
-                targetDetail.scrollIntoView({behavior: 'smooth'});
-            });
-        });
-        
-        // Close project details
-        closeButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const parentDetails = this.closest('.project-details');
-                parentDetails.classList.remove('active');
-                
-                // Scroll back to the grid
-                document.querySelector('.projects-grid').scrollIntoView({behavior: 'smooth'});
-            });
-        });
-        
-        // Function to change detail media (handles both photos and video)
-        function changeDetailMedia(elementId, mediaSource, isVideo) {
-            const element = document.getElementById(elementId);
-            
-            // Update the active thumbnail
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            thumbnails.forEach(thumb => {
-                thumb.classList.remove('active');
-            });
-            event.currentTarget.classList.add('active');
-            
-            if (isVideo) {
-                // If element is already a video
-                if (element.tagName === 'VIDEO') {
-                    element.src = mediaSource;
-                    element.load(); // Reload the video with new source
-                } else {
-                    // Need to replace image with video
-                    const parent = element.parentNode;
-                    const video = document.createElement('video');
-                    video.id = elementId;
-                    video.src = mediaSource;
-                    video.controls = true;
-                    video.style.width = '100%';
-                    video.style.height = '100%';
-                    video.style.objectFit = 'cover';
-                    parent.replaceChild(video, element);
-                }
-            } else {
-                // If we need to replace video with image
-                if (element.tagName === 'VIDEO') {
-                    const parent = element.parentNode;
-                    const img = document.createElement('img');
-                    img.id = elementId;
-                    img.src = mediaSource;
-                    img.alt = "Mini Hoop Project";
-                    parent.replaceChild(img, element);
-                } else {
-                    // Simply update the image source
-                    element.src = mediaSource;
-                }
-            }
-        }
-        
-        // Function to open modal for both images and videos
-        function openMediaModal(elementId) {
-            const modal = document.getElementById('photoModal');
-            const modalContent = document.getElementById('modalImage');
-            const element = document.getElementById(elementId);
-            
-            modal.style.display = "flex";
-            
-            // If it's a video
-            if (element.tagName === 'VIDEO') {
-                // Create a new video element for the modal
-                const modalVideo = document.createElement('video');
-                modalVideo.src = element.src;
-                modalVideo.controls = true;
-                modalVideo.autoplay = true;
-                modalVideo.className = 'modal-content';
-                modalVideo.id = 'modalImage';
-                
-                // Replace the modal image with video
-                modalContent.parentNode.replaceChild(modalVideo, modalContent);
-            } else {
-                // If it's standard image handling
-                const modalImg = document.getElementById('modalImage');
-                if (modalImg.tagName !== 'IMG') {
-                    // Replace video with image if needed
-                    const img = document.createElement('img');
-                    img.className = 'modal-content';
-                    img.id = 'modalImage';
-                    img.src = element.src;
-                    modalImg.parentNode.replaceChild(img, modalImg);
-                } else {
-                    modalImg.src = element.src;
-                }
-            }
-            
-            setTimeout(() => {
-                modal.classList.add('show');
-            }, 10);
-        }
-        
-        // Enhanced modal close function to handle video pause
-        function closeModal() {
-            const modal = document.getElementById('photoModal');
-            const modalContent = document.getElementById('modalImage');
-            
-            // If it's a video, pause it
-            if (modalContent.tagName === 'VIDEO') {
-                modalContent.pause();
-            }
-            
-            modal.classList.remove('show');
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 400);
-        }
-        
-        // Close modal when clicking outside the image
-        window.onclick = function(event) {
-            const modal = document.getElementById('photoModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        };
-        
-        // Close modal when pressing the Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                closeModal();
-                
-                // Also close any active project details when pressing Escape
-                projectDetails.forEach(detail => {
-                    if (detail.classList.contains('active')) {
-                        detail.classList.remove('active');
-                    }
-                });
-            }
-        });
-        
-        // Show/hide back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-        
-        // Add fade-in animation for grid items on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const projectPreviews = document.querySelectorAll('.project-preview');
-            
-            projectPreviews.forEach((preview, index) => {
-                setTimeout(() => {
-                    preview.classList.add('visible');
-                }, 100 * (index + 1));
-            });
-        });
-    </script>
 </body>
 </html>
