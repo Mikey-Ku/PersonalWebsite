@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Michael Ku Jr's portfolio projects - Olin College of Engineering student showcasing engineering and technical work">
     <title>Projects | Michael Ku Jr</title>
-    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="../css/projects.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="projects.html" target="_self">Projects</a></li>
                 <li><a href="experiences.html">Experience</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -35,15 +35,28 @@
             <button class="filter-btn" data-filter="electrical" aria-pressed="false">Electrical</button>
         </div>
 
+
         <!-- Software Projects -->
         <div class="projects-section" id="software">
             <h3 class="section-subtitle">Software Projects</h3>
             <div class="projects-grid">
+                <div class="project-preview" data-project="ai-agent-library">
+                    <div class="preview-image">
+                        <span class="project-tag">Software</span>
+                        <img src="../Images/langgraph_logo.png" alt="AI Agent Library">
+                    </div>
+                    <div class="preview-content">
+                        <h3>AI Agent Library</h3>
+                        <p>A LangChain-powered toolkit for assembling reusable intelligent agent workflows.</p>
+                        <a href="#ai-agent-library-details" class="learn-more" data-project="ai-agent-library">Learn More</a>
+                    </div>
+                </div>
+
                 <!-- AI Fridge Camera (Software) -->
                 <div class="project-preview" data-project="Fridge">
                     <div class="preview-image">
                         <span class="project-tag">Software</span>
-                        <img src="Images/Camera.jpg" alt="Fridge Camera">
+                        <img src="../Images/Camera.jpg" alt="Fridge Camera">
                     </div>
                     <div class="preview-content">
                         <h3>AI Fridge Camera</h3>
@@ -52,11 +65,35 @@
                     </div>
                 </div>
 
+                <div class="project-preview" data-project="balloons">
+                    <div class="preview-image">
+                        <span class="project-tag">Software</span>
+                        <img src="../Images/BloonsTD1.png" alt="Bloons TD gameplay screenshot">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Balloons TD Replica</h3>
+                        <p>A Python tower defense game recreating Bloons TD mechanics and gameplay flow.</p>
+                        <a href="#balloons-details" class="learn-more" data-project="balloons">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="project-preview" data-project="phishing">
+                    <div class="preview-image">
+                        <span class="project-tag">Software</span>
+                            <img src="../Images/emailClassification.png" alt="email Classification results">
+                    </div>
+                    <div class="preview-content">
+                        <h3>Email Phishing Detector</h3>
+                        <p>A MATLAB security tool combining calculus-based features with ML classification.</p>
+                        <a href="#phishing-details" class="learn-more" data-project="phishing">Learn More</a>
+                    </div>
+                </div>
+
                 <!-- Baseball Salary Scraper (Software) -->
                 <div class="project-preview" data-project="Baseball">
                     <div class="preview-image">
                         <span class="project-tag">Software</span>
-                        <img src="Images/FangraphsLogo.png" alt="Baseball Scraper">
+                        <img src="../Images/FangraphsLogo.png" alt="Baseball Scraper">
                     </div>
                     <div class="preview-content">
                         <h3>Baseball Salary Scraper</h3>
@@ -69,7 +106,7 @@
                 <div class="project-preview" data-project="Scam">
                     <div class="preview-image">
                         <span class="project-tag">Software</span>
-                        <img src="Images/Scam.png" alt="Scam Simulation">
+                        <img src="../Images/Scam.png" alt="Scam Simulation">
                     </div>
                     <div class="preview-content">
                         <h3>Call Center Scam Simulation</h3>
@@ -79,7 +116,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Electrical Projects -->
         <div class="projects-section" id="electrical">
             <h3 class="section-subtitle">Electrical Projects</h3>
@@ -88,7 +124,7 @@
                 <div class="project-preview" data-project="mini-hoop">
                     <div class="preview-image">
                         <span class="project-tag">Electrical</span>
-                        <img src="Images/CoverHoop.png" alt="Customized Mini Hoop">
+                        <img src="../Images/CoverHoop.png" alt="Customized Mini Hoop">
                     </div>
                     <div class="preview-content">
                         <h3>Custom Mini Hoop</h3>
@@ -101,7 +137,7 @@
                 <div class="project-preview" data-project="baja">
                     <div class="preview-image">
                         <span class="project-tag">Electrical</span>
-                        <img src="Images/PCB4.png" alt="Baja Ride Height Sensor">
+                        <img src="../Images/PCB4.png" alt="Baja Ride Height Sensor">
                     </div>
                     <div class="preview-content">
                         <h3>Baja Ride Height Module</h3>
@@ -109,61 +145,11 @@
                         <a href="#baja-details" class="learn-more" data-project="baja">Learn More</a>
                     </div>
                 </div>
-
-                <!-- Hopper Project (Electrical/Mechanical) -->
-                <div class="project-preview" data-project="hopper">
-                    <div class="preview-image">
-                        <span class="project-tag">Electrical</span>
-                        <img src="Images/Hopper.png" alt="Hopper Project">
-                    </div>
-                    <div class="preview-content">
-                        <h3>Hopper Project</h3>
-                        <p>A mechanical design project inspired by the click beetle's hopping mechanism, applying engineering principles to create a unique hopping device.</p>
-                        <a href="#hopper-details" class="learn-more" data-project="hopper">Learn More</a>
-                    </div>
-                </div>
             </div>
         </div>
 
         
         <!-- Project Detailed Sections -->
-        
-        <!-- Hopper Project Details -->
-        <div id="hopper-details" class="project-details" data-project="hopper">
-            <div class="details-container">
-                <div class="details-header">
-                    <h3>Hopper Project</h3>
-                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="details-content">
-                    <div class="photos-container">
-                        <div class="main-photo">
-                            <img id="hopper-main-img" src="Images/Hopper.png" alt="Hopper Project">
-                        </div>
-                        <div class="photo-gallery">
-                            <div class="thumbnail active" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper.png', false)">
-                                <img src="Images/Hopper.png" alt="Hopper">
-                            </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper2.png', false)">
-                                <img src="Images/Hopper2.png" alt="Hopper">
-                            </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper3.png', false)">
-                                <img src="Images/Hopper3.png" alt="Hopper">
-                            </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('hopper-main-img', 'Images/Hopper4.png', false)">
-                                <img src="Images/Hopper4.png" alt="Hopper">
-                            </div>
-                        </div>
-                        <a href="#" class="view-full-photo" onclick="openMediaModal('hopper-main-img')">View Full Size</a>
-                    </div>
-                    <div class="details-text">
-                        <p>In the Design Nature engineering course, I developed a mechanical hopper inspired by the click beetle's unique jumping mechanism. The project began with field observations of natural hoppers, followed by systematic application of engineering design principles through multiple prototype iterations.</p>
-                        <p>My final design utilized principles of potential energy storage and center of mass manipulation. Using elastic rubber tubing, the hopper stored energy that was released through a precision-timed trigger mechanism. This caused a controlled collision between two masses, generating both an audible clap and the kinetic force needed to propel the device upward.</p>
-                        <p>This project demonstrated practical applications of biomimicry in engineering and reinforced fundamental concepts of energy transfer, mechanical advantage, and iterative design methodology. The successful implementation validated how biological systems can inform innovative engineering solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- Mini Hoop Details -->
         <div id="minihoop-details" class="project-details" data-project="mini-hoop">
@@ -182,17 +168,17 @@
                         </div>
                         <div class="photo-gallery">
                             <div class="thumbnail video-thumbnail active" onclick="changeDetailMedia('website-main-video', 'Videos/IMG_8407.mov', true)">
-                                <img src="Images/CoverHoop.png" alt="Basketball Hoop Demo">
+                                <img src="../Images/CoverHoop.png" alt="Basketball Hoop Demo">
                                 <i class="fas fa-play-circle"></i>
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', 'Images/HoopBack.jpg', false)">
-                                <img src="Images/HoopBack.jpg" alt="Back of Hoop">
+                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', '../Images/HoopBack.jpg', false)">
+                                <img src="../Images/HoopBack.jpg" alt="Back of Hoop">
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', 'Images/HoopSensor.jpg', false)">
-                                <img src="Images/HoopSensor.jpg" alt="Front View of Hoop">
+                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', '../Images/HoopSensor.jpg', false)">
+                                <img src="../Images/HoopSensor.jpg" alt="Front View of Hoop">
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', 'Images/CoverHoop.png', false)">
-                                <img src="Images/CoverHoop.png" alt="Main Image of Hoop">
+                            <div class="thumbnail" onclick="changeDetailMedia('website-main-video', '../Images/CoverHoop.png', false)">
+                                <img src="../Images/CoverHoop.png" alt="Main Image of Hoop">
                             </div>
                         </div>
                         <a href="#" class="view-full-photo" onclick="openMediaModal('website-main-video')">View Full Size</a>
@@ -216,20 +202,20 @@
                 <div class="details-content">
                     <div class="photos-container">
                         <div class="main-photo">
-                            <img id="baja-main-img" src="Images/PCB4.png" alt="PCB Design">
+                            <img id="baja-main-img" src="../Images/PCB4.png" alt="PCB Design">
                         </div>
                         <div class="photo-gallery">
-                            <div class="thumbnail active" onclick="changeDetailMedia('baja-main-img', 'Images/PCB4.png', false)">
-                                <img src="Images/PCB4.png" alt="PCB Design">
+                            <div class="thumbnail active" onclick="changeDetailMedia('baja-main-img', '../Images/PCB4.png', false)">
+                                <img src="../Images/PCB4.png" alt="PCB Design">
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', 'Images/PCB3.png', false)">
-                                <img src="Images/PCB3.png" alt="PCB Implementation">
+                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', '../Images/PCB3.png', false)">
+                                <img src="../Images/PCB3.png" alt="PCB Implementation">
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', 'Images/PCB2.png', false)">
-                                <img src="Images/PCB2.png" alt="Circuit Design">
+                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', '../Images/PCB2.png', false)">
+                                <img src="../Images/PCB2.png" alt="Circuit Design">
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', 'Images/PCB1.png', false)">
-                                <img src="Images/PCB1.png" alt="Testing">
+                            <div class="thumbnail" onclick="changeDetailMedia('baja-main-img', '../Images/PCB1.png', false)">
+                                <img src="../Images/PCB1.png" alt="Testing">
                             </div>
                         </div>
                         <a href="#" class="view-full-photo" onclick="openMediaModal('baja-main-img')">View Full Size</a>
@@ -238,6 +224,25 @@
                         <p>For the Olin Baja racing team, I contributed to developing a precision ride height measurement system to analyze suspension performance under extreme driving conditions. This data acquisition module was essential for validating design calculations and optimizing suspension performance during test runs.</p>
                         <p>The technical implementation featured a custom-designed PCB interfacing with angular displacement sensors, with data processing handled by Raspberry Pi Pico microcontrollers. The system utilized Bluetooth Low Energy (BLE) for wireless data transmission to a central analysis computer. I developed firmware that performed multi-step signal processing: converting voltage readings to resistance values, calculating angular displacement, and ultimately deriving physical measurements of ride height and suspension forces.</p>
                         <p>This instrumentation system provided the suspension engineering team with quantitative performance data that directly informed design improvements for subsequent vehicle iterations. The project integrated electrical engineering, embedded systems programming, and mechanical analysis to create a practical solution for real-world automotive testing applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="ai-agent-library-details" class="project-details" data-project="ai-agent-library">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>AI Agent Library</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <!-- Media content to be added -->
+                    </div>
+                    <div class="details-text">
+                        <p>I developed a modular AI tool library that enabled rapid creation and orchestration of intelligent workflows. Built with LangChain for LLM powered reasoning and LangGraph for visual graph based orchestration, the library let developers combine multiple tools, APIs, databases, and custom functions into reusable "agent" pipelines.</p>
+                        <p>In addition to the core framework, the library included prebuilt agents for web crawling and research, lead generation, marketing outreach, and customer service automation. Each agent could be customized or extended, making it easy to create new AI driven workflows without starting from scratch.</p>
+                        <p>This project showcased my ability to design scalable AI agent frameworks that blended large language models with structured workflows, giving teams a plug and play way to add advanced automation into their products.</p>
                     </div>
                 </div>
             </div>
@@ -253,7 +258,7 @@
                 <div class="details-content">
                     <div class="photos-container">
                         <div class="main-photo">
-                            <img id="project4-main-img" src="Images/Camera.jpg" alt="Fridge Camera">
+                            <img id="project4-main-img" src="../Images/Camera.jpg" alt="Fridge Camera">
                         </div>
                         <a href="#" class="view-full-photo" onclick="openMediaModal('project4-main-img')">View Full Size</a>
                     </div>
@@ -263,6 +268,59 @@
                         <p>This ongoing project demonstrates application of artificial intelligence to practical sustainability challenges. By providing actionable information about available ingredients and suggesting creative ways to use them, the system aims to significantly reduce household food waste while simplifying meal planning for users.</p>
                     </div>
                 </div>  
+            </div>
+        </div>
+        
+
+        <div id="balloons-details" class="project-details" data-project="balloons">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Balloons TD Replica</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="project-bloons-main-img" src="../Images/BloonsTD1.png" alt="Bloons TD gameplay screenshot">
+                        </div>
+                        <div class="photo-gallery">
+                            <div class="thumbnail active" onclick="changeDetailMedia('project-bloons-main-img', '../Images/BloonsTD1.png', false)">
+                                <img src="../Images/BloonsTD1.png" alt="Bloons TD screenshot 1">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('project-bloons-main-img', '../Images/BloonsTD2.png', false)">
+                                <img src="../Images/BloonsTD2.png" alt="Bloons TD screenshot 2">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('project-bloons-main-img', '../Images/BloonsTD3.png', false)">
+                                <img src="../Images/BloonsTD3.png" alt="Bloons TD screenshot 3">
+                            </div>
+                        </div>
+                        <a href="#" class="view-full-photo" onclick="openMediaModal('project-bloons-main-img')">View Full Size</a>
+                    </div>
+                    <div class="details-text">
+                        <p>I built a full tower defense game in Python using Pygame that replicated the core design and mechanics of the classic Bloons TD series. I recreated the complete set of game elements, including towers, projectiles, path-following balloons, collision detection, and wave progression, and implemented all sprite interactions so that each tower and balloon behaves as expected.</p>
+                        <p>The result was a fully interactive, playable game with upgradeable towers, multiple rounds of increasing difficulty, and a responsive UI built entirely with custom code. This project demonstrated my ability to translate a complex existing game design into code from scratch, handle real-time event loops, sprite management, and collision logic, and produce a polished interactive experience in Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="phishing-details" class="project-details" data-project="phishing">
+            <div class="details-container">
+                <div class="details-header">
+                    <h3>Email Phishing Detector</h3>
+                    <button class="close-details" aria-label="Close details"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="details-content">
+                    <div class="photos-container">
+                        <div class="main-photo">
+                            <img id="emailClassification" src="../Images/emailClassification.png" alt="Email Classification results">
+                        </div>
+                    </div>
+                    <div class="details-text">
+                        <p>I developed a phishing-email detection system in MATLAB that combined multivariable calculus-based feature engineering with machine learning classification techniques. Using a large dataset of real phishing and legitimate emails, I extracted and normalized multiple features (text patterns, sender metadata, link statistics, and header attributes), applied dimensionality-reduction and scaling methods from multivariable calculus, and trained supervised models to distinguish phishing attempts from legitimate mail.</p>
+                        <p>The resulting tool accepted a raw email as input, processed its features, and returned a clear prediction of whether the message was likely a scam or legitimate. This project demonstrated my ability to blend mathematical analysis with practical machine learning to build a working security-focused application in MATLAB.</p>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -276,7 +334,7 @@
                 <div class="details-content">
                     <div class="photos-container">
                         <div class="main-photo">
-                            <img id="project5-main-img" src="Images/FangraphsLogo.png" alt="Project 5">
+                            <img id="project5-main-img" src="../Images/FangraphsLogo.png" alt="Project 5">
                         </div>
                         <a href="#" class="view-full-photo" onclick="openMediaModal('project5-main-img')">View Full Size</a>
                     </div>
@@ -299,18 +357,20 @@
                 <div class="details-content">
                     <div class="photos-container">
                         <div class="main-photo">
-                            <img id="project6-main-img" src="Images/Scam.png" alt="Scam graphs">
+                            <img id="project6-main-img" src="../Images/Scam.png" alt="Scam graphs">
                         </div>
                         <div class="photo-gallery">
-                            <div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', 'Images/Scam.png', false)">
-                                <img src="Images/Scam.png" alt="Project 6 Image 1">
+                            <div class="thumbnail active" onclick="changeDetailMedia('project6-main-img', '../Images/Scam.png', false)">
+                                <img src="../Images/Scam.png" alt="Project 6 Image 1">
                             </div>
-                            <div class="thumbnail" onclick="changeDetailMedia('project6-main-img', 'Images/PossionDistr.png', false)">
-                                <img src="Images/PossionDistr.png" alt="Project 6 Image 1">
-                            </div><div class="thumbnail" onclick="changeDetailMedia('project6-main-img', 'Images/NegativeBinomial.png', false)">
-                                <img src="Images/NegativeBinomial.png" alt="Project 6 Image 1">
-                            </div><div class="thumbnail" onclick="changeDetailMedia('project6-main-img', 'Images/NormDistr.png', false)">
-                                <img src="Images/NormDistr.png" alt="Project 6 Image 1">
+                            <div class="thumbnail" onclick="changeDetailMedia('project6-main-img', '../Images/PossionDistr.png', false)">
+                                <img src="../Images/PossionDistr.png" alt="Project 6 Image 1">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('project6-main-img', '../Images/NegativeBinomial.png', false)">
+                                <img src="../Images/NegativeBinomial.png" alt="Project 6 Image 1">
+                            </div>
+                            <div class="thumbnail" onclick="changeDetailMedia('project6-main-img', '../Images/NormDistr.png', false)">
+                                <img src="../Images/NormDistr.png" alt="Project 6 Image 1">
                             </div>
                         </div>
                         <a href="#" class="view-full-photo" onclick="openMediaModal('project6-main-img')">View Full Size</a>
@@ -323,8 +383,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    
     <!-- Modal for full photo/video display -->
     <div id="photoModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -345,8 +403,8 @@
         </ul>
     </footer>
     <!-- Scripts -->
-    <script src="js/main.js" defer></script>
-    <script src="js/projects.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/projects.js" defer></script>
 
 </body>
 </html>
